@@ -1,105 +1,176 @@
-<!-- app/views/dashboard/index.php -->
-<div class="row mb-4">
-    <div class="col-12 text-center">
-        <h2 class="fw-bold mb-3">Status Kebencanaan Madura Hari Ini</h2>
-        <p class="text-muted">Pantau titik rawan dan peringatan dini bencana alam di 4 Kabupaten Pulau Madura secara real-time.</p>
-    </div>
-</div>
+<!-- app/views/komunitas/index.php -->
 
-<div class="row">
-    <!-- Map Section -->
-    <div class="col-lg-8 mb-4">
-        <div class="card h-100">
-            <div class="card-header d-flex justify-content-between align-items-center py-3">
-                <span class="fw-bold"><i class="fa-solid fa-map-location-dot me-2 text-brand"></i>Peta Peringatan Dini</span>
-                <div>
-                    <span class="badge badge-aman me-1">Aman</span>
-                    <span class="badge badge-waspada me-1">Waspada</span>
-                    <span class="badge badge-siaga me-1">Siaga</span>
-                    <span class="badge badge-awas">Awas</span>
+<div class="row g-4 mb-5">
+  <!-- Hero Section -->
+  <div class="col-12">
+    <div class="card shadow-sm border-0 rounded-4 overflow-hidden" style="background: linear-gradient(135deg, #0077B6 0%, #00B4D8 100%); color: white;">
+      <div class="card-body p-4 p-md-5 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="flex-grow-1">
+          <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-sm rounded-pill fw-bold">
+            <i class="fa-solid fa-bell me-1"></i> Notifikasi Real-Time
+          </span>
+          <h1 class="display-5 fw-bold mb-3">Peringatan Dini di Genggaman Anda</h1>
+          <p class="lead mb-4" style="color: rgba(255,255,255,0.85);">
+            Tidak perlu selalu membuka website. Bergabunglah dengan Channel Komunitas resmi kami di WhatsApp dan Telegram untuk menerima peringatan dini bencana, info cuaca ekstrem, dan arahan evakuasi langsung di smartphone Anda.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#wa-channel" class="btn btn-light btn-lg rounded-pill fw-semibold text-success shadow-sm">
+              <i class="fa-brands fa-whatsapp me-2"></i>Gabung WhatsApp
+            </a>
+            <a href="#tg-channel" class="btn btn-outline-light btn-lg rounded-pill fw-semibold">
+              <i class="fa-brands fa-telegram me-2"></i>Gabung Telegram
+            </a>
+          </div>
+        </div>
+        <div class="d-none d-md-block text-center" style="min-width: 280px;">
+           <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/channel/mdews" alt="QR Code MDEWS" class="img-fluid rounded-4 shadow-lg border border-4 border-white mb-2" style="max-width: 200px;">
+           <div class="small fw-semibold mt-2 opacity-75"><i class="fa-solid fa-qrcode me-1"></i>Scan untuk bergabung</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Channel Options -->
+  <div class="col-md-6" id="wa-channel">
+    <div class="card shadow-sm border-0 rounded-4 h-100 position-relative overflow-hidden">
+      <div class="position-absolute top-0 end-0 p-3 opacity-10">
+        <i class="fa-brands fa-whatsapp fa-6x"></i>
+      </div>
+      <div class="card-body p-4 p-lg-5">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <div class="icon-circle bg-success text-white shadow" style="width: 60px; height: 60px; font-size: 28px;">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>
+            <h3 class="fw-bold mb-1">WhatsApp Channel</h3>
+            <span class="badge bg-success-subtle text-success border border-success-subtle">Resmi MDEWS</span>
+          </div>
+        </div>
+        
+        <p class="text-muted mb-4">
+          Channel satu arah untuk informasi super cepat. Dapatkan broadcast peringatan dini (Early Warning), status siaga kebencanaan per kabupaten, dan lokasi shelter evakuasi terdekat.
+        </p>
+
+        <div class="row align-items-center mb-4 bg-light rounded-4 p-3 g-0 border">
+            <div class="col-4 text-center pe-3 border-end">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/channel/mdews-bangkalan" alt="WA QR" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-8 ps-3">
+                <h6 class="fw-bold mb-2">Cara Bergabung:</h6>
+                <ol class="small text-muted mb-0 ps-3">
+                    <li class="mb-1">Buka aplikasi WhatsApp</li>
+                    <li class="mb-1">Scan QR Code di samping atau klik tombol di bawah</li>
+                    <li>Klik "Ikuti" (Follow) di pojok kanan atas</li>
+                </ol>
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-success w-100 rounded-pill py-2 fw-semibold shadow-sm">
+          <i class="fa-brands fa-whatsapp me-2"></i>Buka di WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6" id="tg-channel">
+    <div class="card shadow-sm border-0 rounded-4 h-100 position-relative overflow-hidden">
+      <div class="position-absolute top-0 end-0 p-3 opacity-10">
+        <i class="fa-brands fa-telegram fa-6x"></i>
+      </div>
+      <div class="card-body p-4 p-lg-5">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <div class="icon-circle text-white shadow" style="background: #229ED9; width: 60px; height: 60px; font-size: 28px;">
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+          <div>
+            <h3 class="fw-bold mb-1">Telegram Group</h3>
+            <span class="badge text-primary border border-primary-subtle" style="background: #e3f2fd;">Interaktif</span>
+          </div>
+        </div>
+        
+        <p class="text-muted mb-4">
+          Grup interaktif tempat Anda bisa berbagi informasi kondisi lapangan, bertanya kepada petugas BPBD/Relawan, dan mendapatkan update secara real-time dari bot otomatis kami.
+        </p>
+
+        <div class="row align-items-center mb-4 bg-light rounded-4 p-3 g-0 border">
+            <div class="col-4 text-center pe-3 border-end">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://t.me/mdews_madura" alt="TG QR" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-8 ps-3">
+                <h6 class="fw-bold mb-2">Cara Bergabung:</h6>
+                <ol class="small text-muted mb-0 ps-3">
+                    <li class="mb-1">Buka aplikasi Telegram</li>
+                    <li class="mb-1">Scan QR Code di samping atau klik tombol di bawah</li>
+                    <li>Klik "Join Group" di bagian bawah</li>
+                </ol>
+            </div>
+        </div>
+
+        <a href="#" class="btn w-100 rounded-pill py-2 fw-semibold shadow-sm text-white" style="background: #229ED9;">
+          <i class="fa-brands fa-telegram me-2"></i>Buka di Telegram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Regional Groups -->
+  <div class="col-12 mt-2">
+    <h4 class="fw-bold mb-4 border-bottom pb-2"><i class="fa-solid fa-users-line me-2 text-brand"></i>Grup Relawan Regional</h4>
+    <div class="row g-3">
+        <!-- Bangkalan -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border border-warning-subtle bg-warning-subtle rounded-4 h-100">
+                <div class="card-body text-center p-4">
+                    <div class="icon-circle bg-warning text-dark mx-auto mb-3" style="width: 50px; height: 50px;"><i class="fa-solid fa-water"></i></div>
+                    <h6 class="fw-bold mb-1">Relawan Bangkalan</h6>
+                    <p class="small text-muted mb-3">Fokus: Banjir Blega & Modung</p>
+                    <button class="btn btn-sm btn-outline-dark rounded-pill w-100"><i class="fa-brands fa-whatsapp me-1"></i>Join Grup</button>
                 </div>
             </div>
-            <div class="card-body p-0">
-                <div id="map"></div>
+        </div>
+        <!-- Sampang -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border border-success-subtle bg-success-subtle rounded-4 h-100">
+                <div class="card-body text-center p-4">
+                    <div class="icon-circle bg-success text-white mx-auto mb-3" style="width: 50px; height: 50px;"><i class="fa-solid fa-wind"></i></div>
+                    <h6 class="fw-bold mb-1">Relawan Sampang</h6>
+                    <p class="small text-muted mb-3">Fokus: Puting Beliung</p>
+                    <button class="btn btn-sm btn-outline-success rounded-pill w-100"><i class="fa-brands fa-whatsapp me-1"></i>Join Grup</button>
+                </div>
+            </div>
+        </div>
+        <!-- Pamekasan -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border border-danger-subtle bg-danger-subtle rounded-4 h-100">
+                <div class="card-body text-center p-4">
+                    <div class="icon-circle bg-danger text-white mx-auto mb-3" style="width: 50px; height: 50px;"><i class="fa-solid fa-sun"></i></div>
+                    <h6 class="fw-bold mb-1">Relawan Pamekasan</h6>
+                    <p class="small text-muted mb-3">Fokus: Kekeringan Pantura</p>
+                    <button class="btn btn-sm btn-outline-danger rounded-pill w-100"><i class="fa-brands fa-whatsapp me-1"></i>Join Grup</button>
+                </div>
+            </div>
+        </div>
+        <!-- Sumenep -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border border-primary-subtle bg-primary-subtle rounded-4 h-100">
+                <div class="card-body text-center p-4">
+                    <div class="icon-circle bg-primary text-white mx-auto mb-3" style="width: 50px; height: 50px;"><i class="fa-solid fa-water"></i></div>
+                    <h6 class="fw-bold mb-1">Relawan Sumenep</h6>
+                    <p class="small text-muted mb-3">Fokus: Abrasi & Gelombang</p>
+                    <button class="btn btn-sm btn-outline-primary rounded-pill w-100"><i class="fa-brands fa-whatsapp me-1"></i>Join Grup</button>
+                </div>
             </div>
         </div>
     </div>
+  </div>
 
-    <!-- Sidebar Section -->
-    <div class="col-lg-4 mb-4">
-        <!-- Weather Widget (Mock) -->
-        <div class="card mb-4 border-0 shadow-sm">
-            <div class="card-header bg-white py-3">
-                <span class="fw-bold"><i class="fa-solid fa-cloud-sun me-2 text-brand"></i>Prakiraan Cuaca (Mock API)</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="display-4 fw-bold text-brand mb-2">29&deg;C</div>
-                <h5 class="fw-bold">Cerah Berawan</h5>
-                <p class="text-muted mb-0">Curah Hujan: 0mm | Angin: 12 km/h</p>
-                <small class="text-muted">Update: <?= date('d M Y H:i'); ?></small>
-            </div>
-        </div>
-
-        <!-- Recent Alerts -->
-        <div class="card border-0 shadow-sm">
-            <div class="card-header bg-white py-3">
-                <span class="fw-bold"><i class="fa-solid fa-bell me-2 text-brand"></i>Peringatan Terkini</span>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-start py-3">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold"><i class="fa-solid fa-water text-primary me-2"></i>Waspada Banjir</div>
-                        Kec. Blega, Kabupaten Bangkalan
-                        <div class="text-muted small mt-1">2 Jam yang lalu</div>
-                    </div>
-                    <span class="badge badge-waspada rounded-pill">Waspada</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start py-3">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold"><i class="fa-solid fa-sun text-warning me-2"></i>Kekeringan Kritis</div>
-                        Kec. Batumarmar, Kabupaten Pamekasan
-                        <div class="text-muted small mt-1">5 Jam yang lalu</div>
-                    </div>
-                    <span class="badge badge-siaga rounded-pill">Siaga</span>
-                </li>
-            </ul>
-            <div class="card-body text-center py-2">
-                <a href="#" class="btn btn-sm btn-outline-brand">Lihat Semua Peringatan</a>
-            </div>
-        </div>
-    </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize map centered on Madura
-    var map = L.map('map').setView([-7.0865, 113.3134], 10);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Dummy Markers based on PRD colors
-    // Aman: #205A28, Waspada: #F9A825, Siaga: #EF6C00, Awas: #C62828
-
-    // Bangkalan (Waspada)
-    var markerBangkalan = L.circleMarker([-7.0263, 112.7441], {
-        color: '#F9A825', fillColor: '#F9A825', fillOpacity: 0.8, radius: 12
-    }).addTo(map).bindPopup('<b>Bangkalan</b><br>Status: Waspada (Banjir)');
-
-    // Sampang (Aman)
-    var markerSampang = L.circleMarker([-7.1895, 113.2435], {
-        color: '#205A28', fillColor: '#205A28', fillOpacity: 0.8, radius: 10
-    }).addTo(map).bindPopup('<b>Sampang</b><br>Status: Aman');
-
-    // Pamekasan (Siaga)
-    var markerPamekasan = L.circleMarker([-7.1611, 113.4819], {
-        color: '#EF6C00', fillColor: '#EF6C00', fillOpacity: 0.8, radius: 12
-    }).addTo(map).bindPopup('<b>Pamekasan</b><br>Status: Siaga (Kekeringan)');
-
-    // Sumenep (Awas)
-    var markerSumenep = L.circleMarker([-7.0163, 113.8660], {
-        color: '#C62828', fillColor: '#C62828', fillOpacity: 0.8, radius: 15
-    }).addTo(map).bindPopup('<b>Sumenep</b><br>Status: Awas (Gelombang Tinggi)');
-});
-</script>
+<style>
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+</style>
